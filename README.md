@@ -1,10 +1,9 @@
 # Project Title:  Lab Setup: Deploy Virtual Machines
-## Project Supervisor: Norbert Ephraim
- *Prepared By:Cornelius Michael  21/07/2025*
+## Project Supervisor: Mr Conelius Michael
+ *Prepared By: Alvin Tony 29/09/2026*
 
 ## 1. Project Overview
-Virtual machines (VMs) are essential tools used to create isolated and virtualized environments that allow multiple operating systems to run on a single physical computer. These environments are valuable for various purposes, such as software testing, malware analysis, and cybersecurity training.
-By completing this exercise, you will develop essential skills in creating and managing virtual machines for various purposes. This exercise prepares you to work in various IT roles, including cybersecurity, where virtual machines are commonly used for malware analysis, penetration testing, and secure software testing.
+Virtual machines (VMs) remain one of the most foundational tools in modern IT and cybersecurity work, enabling multiple isolated operating environments to run concurrently on a single physical host. Rather than a niche technique, virtualization now underpins how organizations approach software testing, malware analysis, and hands-on security training allowing risky or experimental activity to be fully contained without endangering production systems or real infrastructure.
 
 ## 2. Project Goals
 - The goal is to install a Hypervisor on your computer (host).
@@ -165,13 +164,12 @@ Successful response with <1ms latency
 - Internal ping test confirmed correct VM communication setup.
 
 ### Challenges:
-- Initial misconfiguration by selecting "NAT" instead of "NAT Network".
-- Needed to configure the NAT Network settings to enable DHCP manually.
-
+-Initial misconfiguration: The network adapter was originally set to "NAT" instead of "NAT Network," which limited the VM to isolated outbound-only connectivity rather than the shared, inter-VM networking required for the lab.
+-Resolution: Reconfigured the adapter to use "NAT Network" and manually enabled DHCP within the NAT Network settings, allowing the VM to obtain an IP address automatically and communicate properly within the virtual network segment.
 ### Key Takeaways:
-- Networking mode selection is critical to VM isolation.
-- Hands-on VM setup builds foundational skills for penetration testing labs and malware analysis environments.
-- Understanding hypervisor networking is essential for real-world cybersecurity lab design.
+-Networking mode selection directly determines the level of isolation a VM has from the host and other systems — a critical control point in any security-focused lab.
+-Hands-on VM configuration builds foundational, transferable skills for penetration testing labs, malware analysis sandboxes, and other contained testing environments.
+-A solid grasp of hypervisor networking is essential for designing realistic, safe cybersecurity labs and avoiding accidental exposure between test and production environments.
 
 ## 7. References
 
